@@ -39,22 +39,23 @@ foreach ($rs in $fetch_rs) {
     #  memory
     $min_memory = [math]::round($sqlServer.Configuration.MaxServerMemory.Minimum / 1024)
     $max_memory = [math]::round($sqlServer.Configuration.MaxServerMemory.RunValue / 1024)
+
     #  security
-
     $login_mode = $sqlServer.LoginMode
-    #  database settings
 
+    #  database settings
     $fill_factor = $sqlServer.Configuration.FillFactor.RunValue
     $backup_c = $sqlServer.Configuration.DefaultBackupCompression.RunValue
     $backup_dir = $sqlServer.BackupDirectory
     $log_dir = $sqlServer.DefaultLog
     $root_dir = $sqlServer.RootDirectory
     $data_dir = $sqlServer.InstallDataDirectory
-    #  advanced
 
+    #  advanced
     $adhoc_q = $sqlServer.Configuration.AdHocDistributedQueriesEnabled.RunValue
     $max_dop = $sqlServer.Configuration.MaxDegreeOfParallelism.RunValue
     $cost_threshold = $sqlServer.Configuration.CostThresholdForParallelism.RunValue
+
     #  traceflags
     $tflags = $sqlServer.EnumActiveGlobalTraceFlags()
 
