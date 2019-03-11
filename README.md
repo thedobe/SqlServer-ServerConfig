@@ -1,5 +1,5 @@
 # SqlServer-ServerConfig
-Crawls over a CMS for 'Production' servers for their database inventory, config, etc
+Crawls over a CMS for 'Production' servers for their SQL Server settngs.
 
 Unfortunately, I was unable to save the file which looped through the CMS. This version will only 'loop' for a single instance at the moment. :/
 
